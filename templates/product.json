@@ -49,12 +49,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "custom_liquid_ggWE97": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div id=\"delm-widget\"><\/div>\n<script>\n  (function () {\n    const today = new Date();\n    const fridayAfter4PM = today.getDay() === 5 && today.getHours() >= 16;\n    const saturdayBefore12PM = today.getDay() === 6 && today.getHours() < 12;\n    let widgetId = ''; \/\/ Default widget ID\n    if (fridayAfter4PM || saturdayBefore12PM) {\n      widgetId = '9bb67b9f-1ffb-4035-a04d-cf02480e126a'; \/\/ Widget ID for Friday after 4PM and Saturday before 12PM\n    }\n    \/\/ Add widget to page\n    document.querySelector('#delm-widget').innerHTML = `\n      <delm-widget\n        data-widget-id=\"${widgetId}\"\n        data-variant-id=\"{{ product.selected_or_first_available_variant.id }}\"\n        data-watch-variant-id-selector=\"{{ 'form[action*=\"\/cart\/add\"] [name=\"id\"]' | escape }}\"\n      ><\/delm-widget>\n    `;\n  })();\n<\/script>"
-          }
         }
       },
       "block_order": [
@@ -65,8 +59,7 @@
         "buy_buttons",
         "03299d74-4d48-45b5-a12e-f9eb8da7e1a3",
         "description",
-        "share",
-        "custom_liquid_ggWE97"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
